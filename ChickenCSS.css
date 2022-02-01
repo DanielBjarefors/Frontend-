@@ -1,0 +1,16 @@
+body{
+background-color: rgb(31, 31, 31); 
+color: white;
+padding: 20px;
+font-family: sans-serif;
+}
+li{
+    display: inline;
+    border: 2px solid white;
+    border-radius: 100px;
+    padding: 6px 10px;
+    margin: 10px;
+}
+a{
+    color: rgb(104, 179, 192);
+}

@@ -1,0 +1,98 @@
+
+body{
+    display: grid;
+    grid-gap: 1em 1em;
+    grid-template-rows: auto auto auto auto auto auto;
+    min-height: auto;
+    max-width: 1100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul{
+    list-style-type: none;    
+}
+
+img{
+    width: 300px;
+    height: auto;
+} 
+
+div {    
+    position: relative;
+    width: 300px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+main {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.picText{
+    position:absolute; 
+    top:0;
+    left: 30px;
+    font-size:20px; 
+    font-family:"vedana"; 
+    background:rgba(251,251,251,0.5); 
+    color: black;
+   
+}
+.picText2{
+    position:absolute; 
+    bottom:0;
+    left: 30px;
+    font-size:20px; 
+    font-family:"vedana"; 
+    background:rgba(251,251,251,0.5); 
+    color: black;
+   
+}
+   
+
+@media (min-width: 55em){
+    body{
+        grid-template-columns: 16em auto;
+        grid-template-areas: 
+            'picture banner'
+            'skills main'
+            'life main'
+            'footer footer'
+     ;
+    }    
+    picture { grid-area: picture;}
+    header { grid-area: banner;}
+    skills {grid-area: skills;}
+    life {grid-area: life;}
+    main {grid-area: main;}
+    footer {grid-area: footer;}
+
+    .container {
+        display: grid;
+        grid-template-columns: auto auto ;
+        padding: 20px;
+        margin-left: 0%;
+        
+      }
+
+    header{
+        padding-top: 9em;
+        text-align: center;
+    }
+    life, skills, footer{
+        text-align: center;
+    }
+
+    
+    
+}
+
+
+
+
+

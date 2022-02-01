@@ -1,0 +1,14 @@
+
+[li~=blue],[li*="blue"], [class*="blue"],#blue, .four, 
+.blue, div.four>p, ul.eight>li, p, [title~=blue], 
+.ten > li:nth-child(4),.eleven li:nth-child(even), 
+.twelve li:nth-child(3),.twelve li:nth-child(5), 
+.thirteen > li:nth-child(4),.thirteen > li:nth-child(5){
+    color: blue;
+}
+[li~=red], [li*="red"], [class*="red"],#red, p, .red,ul,li, [title~=red]{
+    color: red;
+}
+.thirteen > li:nth-child(1), .thirteen > li:nth-child(2){
+    color:black;
+}

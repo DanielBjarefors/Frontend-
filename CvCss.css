@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(248, 248, 250);
+}
+.harryPic, .header1, skillsgrid{
+    
+    border-radius: 5px;
+}
+h2{
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+    text-align: center;
+    
+}
+progress{
+    height: 25px;    
+}
+mainGrid{
+    display: grid;
+    grid-template-areas: 
+        "a a"
+        "b c" 
+        "d d"
+        "e e" / 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+    margin-bottom: 60px;
+    background-color: rgb(167, 164, 164);
+}
+header{
+    grid-area: a;
+    background: lightslategray;
+
+}
+skillsGrid{
+    grid-area: b;
+}
+traitGrid{
+    grid-area: c;
+}
+textGrid{
+    grid-area: d;
+    max-width: 1000px;
+
+}
+footer{
+    grid-area: e;
+    display: flexbox;
+    
+}
+.contact > li{
+    display: inline;
+    border: 2px solid rgb(41, 39, 39);
+    border-radius: 100px;
+    padding: 6px 10px;
+    margin: 10px;
+    margin-top: 5px;
+}
+
+
+/* body {
+    margin: 50px 400px 400px 400px;
+}
+.TopOFPage {
+display: flex;
+
+
+}
+
+.container1, .skills, .twoRows {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+
+
+

@@ -1,0 +1,36 @@
+
+
+.mainGrid{
+    display: grid;
+    grid-template: 
+        "a a"
+        "b c" 
+        "d d" / 2fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    grid-area: a;
+    height: 300px;
+    background-color: rgb(71, 71, 71);
+}
+main {
+    grid-area: b;
+    height: 600px;
+    /* padding: 10px; */
+    background-color: orange;
+    /* overflow: auto; */
+}
+aside {
+    grid-area: c;
+    height: 600px;
+    background-color: red;
+}
+
+footer {
+    grid-area: d;
+    height: 100px;
+    background-color: black;
+}

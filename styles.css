@@ -1,0 +1,30 @@
+h1 {
+    color: red;
+  }
+  p {
+    color: green;
+  }
+  li {
+    color: rgb(2, 0, 128);
+  }
+li {
+    list-style-type: none;
+  }
+  /* .special {
+    color: orange;
+    font-weight: bold;
+  } */
+  /* li.special {
+    color: rgb(0, 255, 55);
+    font-weight: bold;
+  } */
+  li.special,
+  span.special {
+    color: rgb(13, 229, 236);
+    font-weight: bold;
+  }
+
+  li em {
+    color: rgb(155, 80, 230);
+  }
+

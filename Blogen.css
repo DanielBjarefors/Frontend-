@@ -1,0 +1,38 @@
+html{
+    text-align: center;
+    padding-top: 100px;
+}
+#oneLiner1{
+
+    margin-bottom: 20px;
+   }   
+   #list1{
+    display: inline;
+    color: #807e7e;
+    padding-bottom: 60px;
+    width: 10%;
+    height: auto;
+}
+body{
+    background-color: rgb(253, 252, 252); 
+    color: rgb(2, 2, 2);
+   
+    font-family: sans-serif;
+    }
+#text1{
+padding: 0% 25%;
+text-align: left;
+}
+p{
+    color: #7C7C7C;
+}
+/* li{
+        display: inline;
+        border: 2px solid white;
+        border-radius: 100px;
+        padding: 6px 10px;
+       
+    } */
+a{
+        color: rgb(104, 128, 192);
+    }

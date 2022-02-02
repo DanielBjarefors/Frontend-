@@ -1,15 +1,36 @@
+let weightinput = document.getElementById('weight')
+        .addEventListener('keydown', function(e){
+    if(e.key == "Enter"){
+        CalculateAvgCalories();
+    }
+});
 
 
-
-function add() {
+function CalculateAvgCalories() {
     var f = parseInt(document.getElementsByName('input1')[0].value);
-    var result = f*25;
-    var result2 = f*2.2;
-    let ThreeHighDays = result * (1+1/4)
-    let FourLowDays = (result * 7 - (ThreeHighDays*3))/4
+    let calorieMultiplier =0;
+    let proteinMultiplier =0;
+    if (document.getElementById("beginner").checked == true) {
+        calorieMultiplier=25;
+        proteinMultiplier=1.8
+    } 
+    else {
+        calorieMultiplier=30;
+        proteinMultiplier=2.2
 
-    document.getElementsByName('displayCalories')[0].value= result.toFixed(0);
-    document.getElementsByName('displayProtein')[0].value= result2.toFixed(0);
+    }
+
+
+
+    var avgCalories = f*calorieMultiplier;
+    var protein = f*proteinMultiplier;
+    
+    let ThreeHighDays = Math.round((avgCalories * (1+1/4)/10))*10;
+
+    let FourLowDays = Math.round(((avgCalories * 7 - (ThreeHighDays*3))/4)/10)*10;
+    let avgToDisplay = ((ThreeHighDays*3)+(FourLowDays*4))/7
+    document.getElementsByName('displayCorrectedCalories')[0].value= avgToDisplay.toFixed(0);
+    document.getElementsByName('displayProtein')[0].value= protein.toFixed(0);
     document.getElementsByName('display1')[0].value= FourLowDays.toFixed(0);
     document.getElementsByName('display2')[0].value= FourLowDays.toFixed(0);
     document.getElementsByName('display3')[0].value= FourLowDays.toFixed(0);

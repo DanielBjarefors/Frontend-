@@ -1,0 +1,44 @@
+#main{
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    max-width: 1172px;
+    flex-direction: row;
+    text-align: center;
+}
+#col-1{
+    width: 50%;
+    text-align: center;
+}
+
+input[type="radio"]{
+    margin: 0px -20px 0px 20px;
+  }
+input{
+    width: 50px;
+}
+
+#week {
+    display: flex;
+    flex-direction: row;
+}
+
+#label {
+    width: 50%;
+   text-align: right;
+   padding-right: 5px;
+}
+
+label{
+    display:inline-block;
+    padding:1.5px
+}
+
+#box {
+    display: inline-block;
+    padding-left: 5px;
+    width: 50%;
+    text-align: left;
+}
+
+

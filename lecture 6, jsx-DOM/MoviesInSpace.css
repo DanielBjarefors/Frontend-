@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+#change{
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+html {
+    font-family: sans-serif;
+}
+
+body {
+    padding: 2%;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1::before {
+    content: "🎞️ ";
+}
+
+.movies {
+    counter-reset: movies;
+}
+
+.movies li {
+    counter-increment: movies;
+    display: grid;
+    grid: auto auto auto / 5rem auto 1fr;
+    grid-column-gap: 1rem;
+}
+
+.movies li::before {
+    content: counter(movies);
+    grid-row: 1 / span 3;
+    grid-column: 1;
+    text-align: right;
+    font-size: 3rem;
+    font-weight: bold;
+    color: hsl(0, 0%, 50%);
+}
+
+.movies li + li {
+    margin-top: 2rem;
+}
+
+.title {
+    grid-row: 1;
+    grid-column: 3;
+    font-size: 1.25rem;
+}
+
+.poster {
+    grid-row: 1 / span 3;
+    grid-column: 2;
+    width: 3rem;
+}
+
+.year {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.year::before {
+    content: "📅 ";
+}
+
+.rating {
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.rating::before {
+    content: "⭐ ";
+}

@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life Calc</title>
     <link rel="stylesheet" href="CalorieCalc.css">
-    
+    <script src="CalorieCalc.jsx" defer></script>
 </head>
 <body>
     <header id="header">
         <h1>Calorie Calculator</h1>
     </header>
-    <main id=main></main>
+    <main id=main>
         <div id="col-1">
             <div id="radioBtn">
             
@@ -28,7 +28,7 @@
             <label for="">Daily avg Calories: </label> <br>
             <input type="textbox" name="displayCorrectedCalories"> <br> <br>
 
-            <br><br><label for="">Recomended daily protein (g): </label> <br>
+            <label for="">Recomended daily protein (g): </label> <br>
             <input type="textbox" name="displayProtein"> <br><br>
         
             <div id="week">
@@ -39,7 +39,7 @@
                     <label class="day" >Thursday  </label><br>
                     <label class="day" >Friday   </label><br>
                     <label class="day" >Saturday  </label><br>
-                    <label class="day" >Sunday   </label><br>         
+                    <label class="day" >Sunday   </label><br>                            
                 </div>
                 <div id="box">           
                     <input type="textbox" name="display1"> <br>
@@ -49,10 +49,8 @@
                     <input type="textbox" name="display5"> <br>
                     <input type="textbox" name="display6"> <br>
                     <input type="textbox" name="display7"> <br>
-            </div> 
-            
-        </div>   
-          
+                </div>             
+             </div>             
         </div>
         <div id="col-2">
 
@@ -60,7 +58,7 @@
 
 
         </div>
-    <footer id="footer"></footer>
-    <script src="CalorieCalc.jsx" defer></script>
+    </main>
+    <footer id="footer"></footer>    
 </body>
 </html>

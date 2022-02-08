@@ -39,12 +39,13 @@
         }
         else{
             document.querySelector('#noResults').innerHTML=' '
-            let forecastList = document.querySelector('#pictures');
+
+            let picList = document.querySelector('#pictures');
             for (let i = 1; i <= 12; i++) {
                 let imgURL = json.hits[i].largeImageURL;
                 let img = document.createElement('img');
                 img.src = imgURL;
-                forecastList.append(img);
+                picList.append(img);
             }
         }
     }

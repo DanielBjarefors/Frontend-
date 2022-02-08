@@ -1,20 +1,27 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flicker Search</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTTP</title>
+  <script src="PixabySearch.jsx" defer></script>
 </head>
 <body>
-
-
-
-
-    <form action="https://pixabay.com/api/?key=25578056-62bc3da3830a7bfd7a3d93ef8&q=yellow+flowers&image_type=photo" method="get">
-
-        <input type="text" name="" key ="25578056-62bc3da3830a7bfd7a3d93ef8&q">
-        <p name="this">blue</p>
-    </form>
-    
+  <h1>PicSearcher</h1>
+  <form id="frm1" action="https://pixabay.com/api">
+    What are you looking for? <input type="text" name="question"><br>
+    Filter by color: <input type="text" name="color"><br><br>
+    <!-- <input type="submit" value="Submit"> -->
+  </form> 
+  <button onclick="Search()">Search</button>
+  
+  <p><span id="noResults"> </span></p>
+<img src="" alt="">
+  <h2>Pictures</h2>
+  <ul id="pictures"></ul>
 </body>
 </html>

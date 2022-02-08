@@ -1,16 +1,16 @@
-let wmf = document.querySelector('#book-list li:nth-child(2) .name');
-console.log(wmf);
+const list = document.querySelector('#book-list ul');
+
+// delete books looks for all clicks in parent
+list.addEventListener('click', (e) => {
+  if(e.target.className == 'delete'){
+    const li = e.target.parentElement;
+    li.parentNode.removeChild(li);
+  }
+});
 
 
-var books
 
 
 
 
 
-
- // let titles = document.getElementsByClassName('title');
-
-// Array.from(item).forEach(function(item) {
-//     console.log(item);
-// });

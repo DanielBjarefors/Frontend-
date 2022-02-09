@@ -42,9 +42,23 @@
             let picList = document.querySelector('#pictures');
             for (let i = 0; i < json.hits.length; i++) {
                 let imgURL = json.hits[i].webformatURL;
+                let li = document.createElement('li')
                 let img = document.createElement('img');
+                let p1 = document.createElement('p');
+                let p2 = document.createElement('p');
+                var br = document.createElement("br");
                 img.src = imgURL;
-                picList.append(img);
+                p1.textContent='Photo by: ' + json.hits[i].user;
+                p2.textContent='Tags: ' + json.hits[i].tags;
+
+                document.querySelector('#pictures').appendChild(li);
+                document.querySelector('#pictures li:last-child').append(img);
+
+                document.querySelector('#pictures li:last-child').append(p1);
+                document.querySelector('#pictures li:last-child').append(p2);
+
+                // picList.append(li);
+                // picList.li.append(img);
             }
         }
         let pages = Math.ceil( json.total/10);
@@ -58,8 +72,7 @@
         else if (pageNum=== 1) {
             prevBtn.disabled=true;
             nextBtn.disabled=false;
-        } 
-        
+        }         
         else {
             nextBtn.disabled=false;
             prevBtn.disabled=false;

@@ -8,19 +8,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTTP</title>
+  <link rel="stylesheet" href="PixabaySearch.css">
   <script src="PixabySearch.jsx" defer></script>
 </head>
 <body>
   <h1>PicSearcher</h1>
   <form id="frm1" action="https://pixabay.com/api">
-    What are you looking for? <input type="text" name="question"><br>
-    Filter by color: <input type="text" name="color"><br><br>
+    <label for=""> What are you looking for? </label><br>
+    <input type="text" name="question"><br>
+    <label for="">Filter by color: </label> <br>
+    <input type="text" name="color"><br><br>
     <!-- <input type="submit" value="Submit"> -->
   </form> 
-  <button onclick="Search()">Search</button>
+  
+  <button onclick="Search(0)" id='search'>Search</button>
+  <button onclick="Search(1)" id='prev'>Previous</button>
+  <button onclick="Search(2)" id='next'>Next</button>
+
   
   <p><span id="noResults"> </span></p>
-<img src="" alt="">
   <h2>Pictures</h2>
   <ul id="pictures"></ul>
 </body>

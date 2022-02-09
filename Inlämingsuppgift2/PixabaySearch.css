@@ -1,0 +1,14 @@
+#pictures{
+    flex-flow: row;
+ 
+}
+
+img {
+    width:  600px;
+    height: 450px;
+    object-fit:contain;
+    border: 3px solid rgb(154, 160, 241);
+    border-radius: 4px;
+    padding: 5px;
+    margin: 3px 5px;
+}

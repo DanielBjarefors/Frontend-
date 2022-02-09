@@ -56,9 +56,6 @@
 
                 document.querySelector('#pictures li:last-child').append(p1);
                 document.querySelector('#pictures li:last-child').append(p2);
-
-                // picList.append(li);
-                // picList.li.append(img);
             }
         }
         let pages = Math.ceil( json.total/10);

@@ -1,20 +1,44 @@
+html{
+    background-image: url("https://pixabay.com/get/g1b5b82a8af2ba4eab0a64b12ec3b54e0704b55349f3ea6954e51376aa441a3046332e53fe288b555f2b4706f1ed3b36fb7f82878075c28d39700a402feb4b5a0_1280.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    height: 3000px;
+    background-position: center;
+}
+
+body{
+    text-align: center;    
+}
+
+
+
 #pictures{
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    justify-content: center;
 }
-
-img {
-    width:  600px;
-    height: 450px;
-    object-fit:contain;
-    
+option:hover{
+    border-radius: 4px;
+    cursor:pointer;
+    background-color: rgb(176, 245, 143);
 }
-li{
+button:hover{
+    background-color: rgb(176, 245, 143);
+    border-radius: 4px;
+    cursor:pointer;
+  }
+  li{
     border: 3px solid rgb(154, 160, 241);
     border-radius: 4px;
     padding: 5px;
-    margin: 5px 5px;
-    
+    margin: 5px 5px;    
     list-style: none;
+    
 }
+img {
+    width:  600px;
+    height: 450px;
+    object-fit:contain;    
+}
+

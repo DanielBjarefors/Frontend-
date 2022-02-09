@@ -14,11 +14,23 @@
 <body>
   <h1>PicSearcher</h1>
   <form id="frm1" action="https://pixabay.com/api">
+      
     <label for=""> What are you looking for? </label><br>
-    <input type="text" name="question"><br>
+    <input type="text" name="question" placeholder="Big Yellow Cat"><br>
+    
     <label for="">Filter by color: </label> <br>
-    <input type="text" name="color"><br><br>
-    <!-- <input type="submit" value="Submit"> -->
+    <select id="colors" name="colors">
+      <option value="">No color</option>
+      <option value="Blue">Blue</option>
+      <option value="Red">Red</option>
+      <option value="Yellow">Yellow</option>
+      <option value="Green">Green</option>
+      <option value="White">White</option>
+      <option value="Black">Black</option>
+      <option value="Pink">Pink</option>
+      <option value="Purple">Purple</option>
+      <option value="Orange">Orange</option>
+    </select>  
   </form> 
   
   <button onclick="Search(0)" id='search'>Search</button>

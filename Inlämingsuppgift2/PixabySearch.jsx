@@ -1,6 +1,6 @@
-
-   let pageNum =0;   
-   async function Search(button) {
+    let q ='';
+    let pageNum =0;   
+    async function Search(button) {
         if (button === 1) {
             pageNum -=1;
         }      
@@ -12,13 +12,16 @@
         }
 
         let parent = document.querySelector('#pictures')
-        while (parent.firstChild) { parent.removeChild(parent.firstChild); }
+            while (parent.firstChild) { parent.removeChild(parent.firstChild); }
 
-        let inputQ = document.getElementById('frm1');
-        let q ='';
+            
 
-        for (let i = 0; i < inputQ.length; i++) {
-            q+= ' '+inputQ.elements[i].value;            
+        if (button===0) { 
+            q='';
+            let inputQ = document.getElementById('frm1');
+            for (let i = 0; i < inputQ.length; i++) {
+                q+= ' '+inputQ.elements[i].value;            
+            }
         }
 
         let params = new URLSearchParams({
@@ -45,19 +48,25 @@
             }
         }
         let pages = Math.ceil( json.total/10);
-        let searchBtn = document.querySelector('#search');
         let prevBtn = document.querySelector('#prev');
         let nextBtn = document.querySelector('#next');
 
         if (pageNum=== pages) {
             nextBtn.disabled=true;
+            prevBtn.disabled=false;
         }
         else if (pageNum=== 1) {
             prevBtn.disabled=true;
+            nextBtn.disabled=false;
         } 
-        else if (pageNum<pages&&pageNum>1) {
+        
+        else {
             nextBtn.disabled=false;
             prevBtn.disabled=false;
+        }
+        if (json.total<=10) {
+            nextBtn.disabled=true;
+            prevBtn.disabled=true;
         }
 
     }

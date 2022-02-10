@@ -1,7 +1,4 @@
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +14,10 @@
   <h1>PicSearcher</h1>
   <form id="frm1" action="https://pixabay.com/api">
       
-    <label for=""> What are you looking for? </label><br>
-    <input type="text" name="question" placeholder="Sunset Landscape Cat"><br>
+    <label for=""> What are you looking for? </label>
+    <input id="'searchTerm" type="text" name="question" placeholder="Sunset, Landscape, Cat?">
     
-    <label for="">Filter by color: </label> <br>
+    <label for="">Filter by color: </label>
     <select id="colors" name="colors">
       <option value="">No color</option>
       <option value="Blue">Blue</option>
@@ -38,10 +35,10 @@
   <button onclick="Search(0)" id='search'>Search</button>
   <button onclick="Search(1)" id='prev'>Previous</button>
   <button onclick="Search(2)" id='next'>Next</button>
-
   
   <p><span id="pages"> </span></p>
   <p><span id="noResults"> </span></p>
   <ul id="pictures"></ul>
+
 </body>
 </html>

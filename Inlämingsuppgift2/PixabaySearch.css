@@ -1,17 +1,14 @@
 html{
-    background-image: url("https://pixabay.com/get/g1b5b82a8af2ba4eab0a64b12ec3b54e0704b55349f3ea6954e51376aa441a3046332e53fe288b555f2b4706f1ed3b36fb7f82878075c28d39700a402feb4b5a0_1280.jpg");
-    background-repeat:no-repeat;
-    background-size:cover;
-    height: 3000px;
+    background-image: linear-gradient(rgba(33, 33, 33, 0.75), rgba(33,33,33,0.75)), url("https://cdn.pixabay.com/photo/2021/10/02/01/48/background-6674010_960_720.jpg");
     background-position: center;
 }
-
 body{
-    text-align: center;    
+    text-align: center;  
+    color: rgb(243, 243, 243);  
 }
-
-
-
+p{
+    font-weight: 900
+}
 #pictures{
     display: flex;
     flex-wrap: wrap;
@@ -42,3 +39,9 @@ img {
     object-fit:contain;    
 }
 
+/* @media (min-height: 1500px){
+    html{
+        height: 3200px;
+
+    }   
+} */

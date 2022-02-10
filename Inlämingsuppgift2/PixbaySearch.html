@@ -7,16 +7,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTTP</title>
+  <title>PicSearcher</title>
   <link rel="stylesheet" href="PixabaySearch.css">
   <script src="PixabySearch.jsx" defer></script>
+  <meta name="keywords" content="picture, search, pixabay">
+  <meta name="description" content="Search for pictures by tags">
 </head>
 <body>
   <h1>PicSearcher</h1>
   <form id="frm1" action="https://pixabay.com/api">
       
     <label for=""> What are you looking for? </label><br>
-    <input type="text" name="question" placeholder="Big Yellow Cat"><br>
+    <input type="text" name="question" placeholder="Sunset Landscape Cat"><br>
     
     <label for="">Filter by color: </label> <br>
     <select id="colors" name="colors">
@@ -38,6 +40,7 @@
   <button onclick="Search(2)" id='next'>Next</button>
 
   
+  <p><span id="pages"> </span></p>
   <p><span id="noResults"> </span></p>
   <h2>Pictures</h2>
   <ul id="pictures"></ul>

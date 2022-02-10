@@ -34,7 +34,7 @@
         let json = await response.json();
      
         if (json.totalHits=== 0) {
-            document.querySelector('#noResults').innerHTML='No matching pictures! Try somthing else.  '
+            document.querySelector('#noResults').innerHTML='No matching pictures! Try somthing else.'
         }
         else{
             document.querySelector('#noResults').innerHTML=' ';
@@ -46,7 +46,6 @@
                 let img = document.createElement('img');
                 let p1 = document.createElement('p');
                 let p2 = document.createElement('p');
-                var br = document.createElement("br");
                 img.src = imgURL;
                 p1.textContent='Photo by: ' + json.hits[i].user;
                 p2.textContent='Tags: ' + json.hits[i].tags;
@@ -58,10 +57,12 @@
                 document.querySelector('#pictures li:last-child').append(p2);
             }
         }
-        let pages = Math.ceil( json.total/10);
+        let pages = Math.ceil( json.totalHits/10);
         let prevBtn = document.querySelector('#prev');
         let nextBtn = document.querySelector('#next');
 
+        document.querySelector('#pages').innerHTML='Page '+pageNum+'/'+pages
+        
         if (pageNum=== pages) {
             nextBtn.disabled=true;
             prevBtn.disabled=false;

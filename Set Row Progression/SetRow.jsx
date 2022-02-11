@@ -1,82 +1,30 @@
   
+document.querySelector("button").addEventListener("keypress", CreateTable);
 
-    // var x = document.querySelectorAll("tr");
-    // let y = x[7].querySelectorAll("td");
-    // y[1].style.backgroundColor = "yellow";
+function CreateTable() {    
+    document.querySelector('#noNum').innerHTML = '';
+    let newTable = document.querySelector('table').cloneNode(true);
+    let weight=[];
+    let reps=[];
 
+    for (let i = 1; i < newTable.rows.length; i++) {
 
-    let x = document.querySelectorAll("tr");
-    let y = x[7].querySelectorAll("td");
-    y[1].style.backgroundColor = "yellow";
-    y[1].innerHTML = "99";
+        weight[i-1] = newTable.rows[i].cells[1].textContent;
+        reps[i-1] = newTable.rows[i].cells[2].children[0].value;
 
+        if (!parseInt(reps[i-1])) {
+            document.querySelector('#noNum').innerHTML = 'Fill in reps for every set!';
+            return;
+        }
+        if (reps[i-1]>5) {
+            newTable.rows[i].cells[1].textContent = Number(weight[i-1]) + 5;
+        }
 
-
-
-   
-
-let repInput = document.querySelector('#repSet')
-        .addEventListener('keydown', function(e){
-    if(e.key == "Enter"){
-        ChangeWeight();
-    }
-});
-
-function ChangeWeight (){
-
-    if (repInput>5) {
-    
-        let x = document.querySelectorAll("tr");
-    let y = x[7].querySelectorAll("td");
-    y[1].style.backgroundColor = "yellow";
-    y[1].innerHTML = "99";
-
-    } else {
-        
+        newTable.rows[i].cells[2].children[0].value ='';        
     }
 
-
-
+    let parent = document.querySelector('#column');
+    parent.insertBefore(newTable,parent.firstChild);
 
 
 }
-
-
-
-
-function CalculateAvgCalories() {
-    var f = parseInt(document.getElementsByName('input1')[0].value);
-
-    let calorieMultiplier =0;
-    let proteinMultiplier =0;
-
-    if (document.getElementById("beginner").checked == true) {
-        calorieMultiplier=25;
-        proteinMultiplier=1.8
-    } 
-    else {
-        calorieMultiplier=30;
-        proteinMultiplier=2.2
-    }
-
-    var avgCalories = f*calorieMultiplier;
-    var protein = f*proteinMultiplier;
-    
-    let ThreeHighDays = Math.round((avgCalories * (1+1/4)/10))*10;
-    let FourLowDays = Math.round(((avgCalories * 7 - (ThreeHighDays*3))/4)/10)*10;
-    let avgToDisplay = ((ThreeHighDays*3)+(FourLowDays*4))/7
-
-    document.getElementsByName('displayCorrectedCalories')[0].value= avgToDisplay.toFixed(0);
-    document.getElementsByName('displayProtein')[0].value= protein.toFixed(0);
-    document.getElementsByName('display1')[0].value= FourLowDays.toFixed(0);
-    document.getElementsByName('display2')[0].value= FourLowDays.toFixed(0);
-    document.getElementsByName('display3')[0].value= FourLowDays.toFixed(0);
-    document.getElementsByName('display4')[0].value= FourLowDays.toFixed(0);
-    document.getElementsByName('display5')[0].value= ThreeHighDays.toFixed(0);
-    document.getElementsByName('display6')[0].value= ThreeHighDays.toFixed(0);
-    document.getElementsByName('display7')[0].value= ThreeHighDays.toFixed(0);
-
-
-
-
-    

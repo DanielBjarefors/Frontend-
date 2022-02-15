@@ -3,11 +3,11 @@
 
 
 
-document.querySelector("#startWeightBtn").addEventListener("click", SetStartingWeight);
-document.querySelector("#createBtn").addEventListener("click", CreateTable);
+document.querySelector("#startWeightBtn").addEventListener("click", setStartingWeight);
+document.querySelector("#createBtn").addEventListener("click", createTable);
 
 
-function SetStartingWeight(){
+function setStartingWeight(){
 
     document.querySelector('#noNum').innerHTML = '';
     let startingWeight = document.querySelector('#startWeight').value;   
@@ -35,7 +35,7 @@ function SetStartingWeight(){
 }
 
 let workoutCounter =1;
-function CreateTable() {       
+function createTable() {       
 
     let isEmpty = document.querySelector('table').rows[3].cells[1].textContent;  
 

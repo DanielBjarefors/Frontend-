@@ -6,7 +6,7 @@
     let pageNum =0;   //page counter
     let prevBtn = document.querySelector('#prev');
     let nextBtn = document.querySelector('#next');
-
+    //clear button status
     nextBtn.disabled=true;
     prevBtn.disabled=true;
 
@@ -16,7 +16,7 @@
             while (parent.firstChild) { 
                 parent.removeChild(parent.firstChild); 
             }
-         //button parameter manages pages or uppdates query   
+         //read button parameter to manage pages and uppdate query   
         if (button === 1) {
             pageNum -=1;
         }      
@@ -71,10 +71,8 @@
         }
         //count pages
         let pages = Math.ceil( json.totalHits/10);
-        //get buttons
-        let prevBtn = document.querySelector('#prev');
-        let nextBtn = document.querySelector('#next');
-        //print current page
+       
+        //print current page and total number of pages
         document.querySelector('#pages').innerHTML='Page '+pageNum+'/'+pages
         //set nav button status depending on pages
         if (pageNum=== pages) {

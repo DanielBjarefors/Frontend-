@@ -1,0 +1,39 @@
+
+
+body, #start,main {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;    
+}
+#start>*{
+    margin: 5px;  
+}
+#start>*:nth-child(3){
+    margin: 10px; 
+}
+input{
+    width: 40px;
+    text-align: center;
+}
+#exercise{
+    width: 60px;
+    text-align: center;
+}
+#column1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+table{
+    
+    border: 3px solid rgb(154, 160, 241);
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px 5px;  
+    text-align: center;  
+}
+
+
+

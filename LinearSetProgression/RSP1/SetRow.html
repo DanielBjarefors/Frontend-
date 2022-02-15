@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSP</title>
+    <link rel="stylesheet" href="SetRow.css">
+    <script src="SetRow.jsx" defer></script>
+</head>
+
+<body>
+
+    <header id="header">
+        <h1>LSP (Linear Set Progression)</h1>        
+    </header>
+
+    <main id=main>
+      <div id="start">
+
+        <label for="">Exercise:</label>
+        <input id='exercise' type="text" value="Deadlift">
+
+        <label for="">Starting weight for 5x5:</label>
+        <input id='startWeight' type="text" value="100">
+        <button id='startWeightBtn' >Set Weight & Exercise</button>
+
+      </div>
+
+      <h3 id="exerciseName"></h3>
+      <button  id='createBtn'>Create next workout</button>
+
+      <p id="noNum"></p>
+
+      <div id="tableDirection">
+        <div id="column1">
+            
+            <table >
+              <thead>
+                <tr>
+                    <th scope="col">nr:1</th>
+                    <th id="totalKg" scope="col">tot:000</th>
+                    <th scope="col">00-00-00</th>
+                </tr>
+            </thead>           
+                <tr >
+                  <th>Set</th> <th>Weight</th> <th>Reps</th>
+                </tr>
+                <tr>
+                  <td>1</td> <td></td> <td><input type="text" value="6"></td>
+                </tr>
+                <tr>
+                  <td>2</td> <td></td> <td><input type="text" value="6"></td>
+                </tr>
+                <tr>
+                  <td>3</td> <td></td> <td><input type="text" value="6"></td>
+                </tr>
+                <tr>
+                  <td>4</td> <td></td> <td><input type="text" value="6"></td>
+                </tr>
+                <tr>
+                  <td>5</td> <td></td> <td><input type="text" value="6"></td>
+                </tr>                
+              </table>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer"></footer>    
+
+</body>
+</html>

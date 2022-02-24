@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-family: Corbel, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#screening-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#screenings li {
+    width: 200px;
+    display: grid;
+    grid-template:
+        "a b"
+        "a c"
+        "a d"
+        "a e" / auto 1fr;
+    margin: 10px;
+}
+
+#screenings .movie-title {
+    grid-area: b;
+}
+
+#screenings .movie-image {
+    grid-area: a;
+    width: 50px;
+    margin-right: 10px;
+}
+
+#screenings .screening-time {
+    grid-area: c;
+}
+
+#screenings .weather-forecast {
+    grid-area: d;
+}
+
+#screenings .buy-ticket-button {
+    grid-area: e;
+}
+
+#tickets li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+}
+
+#tickets .movie-image {
+    width: 25px;
+    margin-right: 10px;
+}
+
+#tickets h3 {
+    flex: 1;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#tickets .remove-ticket-button {
+    border: 0;
+    background-color: transparent;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+}

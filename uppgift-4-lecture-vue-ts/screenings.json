@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Ad Astra",
+        "image": "https://m.media-amazon.com/images/M/MV5BZTllZTdlOGEtZTBmMi00MGQ5LWFjN2MtOGEyZTliNGY1MzFiXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UX148_CR0,0,148,216_AL_.jpg",
+        "time": 15
+    },
+    {
+        "title": "Mr. & Mrs. Smith",
+        "image": "https://m.media-amazon.com/images/M/MV5BMTUxMzcxNzQzOF5BMl5BanBnXkFtZTcwMzQxNjUyMw@@._V1_UX148_CR0,0,148,216_AL_.jpg",
+        "time": 16.5
+    },
+    {
+        "title": "12 Monkeys",
+        "image": "https://m.media-amazon.com/images/M/MV5BN2Y2OWU4MWMtNmIyMy00YzMyLWI0Y2ItMTcyZDc3MTdmZDU4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX148_CR0,0,148,216_AL_.jpg",
+        "time": 18.75
+    },
+    {
+        "title": "Moneyball",
+        "image": "https://m.media-amazon.com/images/M/MV5BMjAxOTU3Mzc1M15BMl5BanBnXkFtZTcwMzk1ODUzNg@@._V1_UX148_CR0,0,148,216_AL_.jpg",
+        "time": 19.25
+    },
+    {
+        "title": "World War Z",
+        "image": "https://m.media-amazon.com/images/M/MV5BNDQ4YzFmNzktMmM5ZC00MDZjLTk1OTktNDE2ODE4YjM2MjJjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_QL75_UX190_CR0,5,190,281_.jpg",
+        "time": 21
+    }
+]

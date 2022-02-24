@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TicketForecast</title>
+  <meta name="description" content="Check the forecast before going to the movies!">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@3" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>TicketForecast</h1>
+  </header>
+  <main>
+    <section id="screenings">
+      <h2>Screenings</h2>
+      <ul id="screening-list">
+        <li v-for="screening in screenings">
+          <h3 class="movie-title">{{ screening.title }}</h3>
+          <img v-bind:src="screening.image" class="movie-image">
+          <p class="screening-time">{{ formatTime(screening.time) }}</p>
+          <p class="weather-forecast">{{ getWeatherForScreening(screening) }}</p>
+          <button
+            type="button"
+            class="buy-ticket-button"
+            @click="buyTicket(screening)">Buy Ticket</button>
+        </li>
+      </ul>
+    </section>
+    <section id="tickets">
+      <h2>My Tickets</h2>
+      <ul id="ticket-list">
+        <li v-for="ticket in tickets">
+          <img v-bind:src="ticket.image" class="movie-image">
+          <h3>
+            <span class="movie-title">{{ ticket.title }}</span>
+            (<span class="screening-time">{{ formatTime(ticket.time) }}</span>)
+          </h3>
+          <button
+            type="button"
+            class="remove-ticket-button"
+            @click="removeTicket(ticket)">❌</button>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <small>Copyright 2022 TicketForecast</small>
+  </footer>
+</body>
+</html>

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Edge;
@@ -10,7 +11,7 @@ namespace SeleniumExample
     public class EdgeDriverTest
     {
         private const string edgeDriverDirectory = @"C:\C#\Frontend med Jakob Kallin\edgedriver_win64 (1)";
-        private const string bradUrl = "file:///C:/C%23/Frontend%20med%20Jakob%20Kallin/Inl%C3%A4mingsuppgift2/PixbaySearch.html";
+        private const string url = "file:///C:/C%23/Frontend%20med%20Jakob%20Kallin/uppgift-3-TodoMVC/index.html";
         private EdgeDriver browser;
 
         // This is run before each test.
@@ -19,14 +20,35 @@ namespace SeleniumExample
         {
             browser = new EdgeDriver(edgeDriverDirectory);
             // We want to go to the same URL for all tests.
-            browser.Url = bradUrl;
+            browser.Url = url;
         }
 
         [TestMethod]
         public void CheckPageTitle()
         {
+            browser.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            browser.FindElementsByCssSelector("Todo");
+            
+            //root.Text.Contains("Burn After Reading")
+
+            browser.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            //browser.FindElementById("button").Click();
+
+            //browser.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            //browser.FindElementById("search").Click();
+
+            
+
+            //browser.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            //browser.FindElementById("search").SendKeys("how to swim");
+
+            //browser.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            //var views = browser.FindElementByClassName("view-count style-scope ytd-video-view-count-renderer");
+
+            
+
+
             // Check the page title.
-            Assert.AreEqual("PicSearcher", browser.Title);
 
             // Note that this will not work, because ".Text" only returns the *visible* text.
             // Assert.AreEqual("Brad Pitt - IMDb", browser.FindElementByCssSelector("title").Text);
